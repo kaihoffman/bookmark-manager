@@ -1,7 +1,7 @@
 require 'bookmark'
 
 describe Bookmark do
-  subject(:bookmark) { Bookmark.new }
+  subject(:bookmark) { Bookmark }
 
   describe '#all method' do
     it 'responds to method' do
@@ -9,6 +9,7 @@ describe Bookmark do
     end
     it 'returns a list of all bookmarks stored' do
       expect(bookmark.all).to include "http://www.google.com"
+      expect(bookmark.all).to include "http://www.facebook.com"
     end
   end
 end

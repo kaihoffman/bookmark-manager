@@ -1,6 +1,6 @@
 class Bookmark
 
-  def all
+  def self.all
     ["http://www.google.com", "http://www.facebook.com"]
   end
 
