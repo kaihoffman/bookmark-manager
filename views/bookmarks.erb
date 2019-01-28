@@ -1,1 +1,7 @@
-All your currently-stored bookmarks
+All your currently-stored bookmarks:
+
+<ul>
+  <% @bookmark.each do |bookmark| %>
+    <li><%= bookmark %></li>
+  <% end %>
+</ul>
