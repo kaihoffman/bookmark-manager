@@ -6,5 +6,9 @@ class BookmarkManager < Sinatra::Base
     "Hi and welcome to the Bookmark Manager app"
   end
 
+  get '/bookmarks' do
+    'All your currently-stored bookmarks'
+  end
+
   run! if app_file == $0
 end
