@@ -8,8 +8,8 @@ describe Bookmark do
       expect(bookmark).to respond_to(:all)
     end
     it 'returns a list of all bookmarks stored' do
-      expect(bookmark.all).to include "http://www.google.com"
-      expect(bookmark.all).to include "http://www.facebook.com"
+      expect(bookmark.all).to include "http://wp.pl"
+      expect(bookmark.all).to include "http://www.destroyallsoftware.com"
     end
   end
 end

@@ -1,7 +1,13 @@
+require 'pg'
+
+
 class Bookmark
+  @conn = PG.connect( dbname: 'bookmark-manager' )
 
   def self.all
-    ["http://www.google.com", "http://www.facebook.com"]
+    result = @conn.exec( "SELECT * FROM bookmarks ORDER BY id" )
+      result.map do |row|
+        row['url']
+      end
+    end
   end
-
-end
