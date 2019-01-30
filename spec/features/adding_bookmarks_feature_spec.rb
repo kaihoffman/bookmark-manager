@@ -1,0 +1,10 @@
+feature "Adding bookmarks to the system" do
+  scenario 'User can add a new bookmark off the main /bookmarks page' do
+    visit('/bookmarks')
+    fill_in :title, with: "CNN News"
+    fill_in :url, with: "https://edition.cnn.com"
+    click_button 'Add bookmark'
+    expect(page).to have_content "CNN News"
+    expect(page).to have_selector(:css, 'a[href="https://edition.cnn.com"]')
+  end
+end

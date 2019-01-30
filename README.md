@@ -22,10 +22,9 @@ SET-UP
 ----
 1. Clone this repository.
 2. Database setup:
-  - connect to ```psql```
-  - in psql, create a database bookmark-manager as follows: ```CREATE DATABASE bookmark-manager;```
-  - ensure you are in the correct database by running ```\c bookmark_manager;```
-  - run the query saved in /db - ```01_create_bookmarks_table.sql```  
-  - in psql, create a TEST database bookmark-manager-test as follows: ```CREATE DATABASE bookmark-manager-test;```
-  - the test files (RSpec) will generate tables for the test database, but in case you want to create them manually, you need to: ```CREATE TABLE bookmarks(id SERIAL PRIMARY KEY, url VARCHAR(60));``` in psql.
-  
+     - connect to ```psql```
+     - in psql, create a database bookmark-manager as follows: ```CREATE DATABASE bookmark-manager;```
+     - ensure you are in the correct database by running ```\c bookmark_manager;```
+     - run the query saved in db/migrations - ```01_create_bookmarks_table.sql```  
+     - in psql, create a TEST database bookmark-manager-test as follows: ```CREATE DATABASE bookmark-manager-test;```
+     - the test files (RSpec) will generate tables for the test database, but in case you want to create them manually, you need to: ```CREATE TABLE bookmarks(id SERIAL PRIMARY KEY, url VARCHAR(60));``` in psql.

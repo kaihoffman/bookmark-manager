@@ -3,10 +3,6 @@ require "capybara/rspec"
 feature "Page loading mechanics" do
   before(:each) do
     connection = PG.connect(dbname: 'bookmark-manager-test')
-    #drop existing tables
-    connection.exec("DROP TABLE IF EXISTS bookmarks;")
-    #create new table.
-    connection.exec("CREATE TABLE bookmarks(id SERIAL PRIMARY KEY, url VARCHAR(60));")
     connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.wp.pl');")
     connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.destroyallsoftware.com');")
   end

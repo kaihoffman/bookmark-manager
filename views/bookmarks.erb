@@ -5,3 +5,10 @@ All your currently-stored bookmarks:
     <li><%= bookmark %></li>
   <% end %>
 </ul>
+
+<p>Add a new bookmark:</p>
+<form action = "/add_bookmark" method = "post">
+  <input type = "text" name = "title" value = "title">
+  <input type = "text" name = "url" value = "URL">
+  <input type = "submit" value = "Add bookmark">
+</form>
