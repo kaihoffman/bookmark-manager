@@ -22,11 +22,16 @@ require 'capybara'
 require 'rspec'
 require 'simplecov'
 require 'simplecov-console'
+require_relative './setup_test_database'
 config.default_formatter = "doc"
 
 Capybara.app = BookmarkManager
 
 ENV['ENVIRONMENT'] = 'test'
+
+config.before(:each) do
+  setup_test_database
+end
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::Console,
