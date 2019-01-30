@@ -10,6 +10,7 @@ gem 'rspec'
 gem 'rake'
 gem 'sinatra'
 gem 'capybara'
+gem 'pg'
 gem 'rubocop', '0.56.0'
 gem 'simplecov', require: false
 gem 'simplecov-console', require: false

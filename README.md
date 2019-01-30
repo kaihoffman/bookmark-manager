@@ -25,4 +25,4 @@ SET-UP
   - connect to ```psql```
   - in psql, create a database bookmark_manager as follows: ```CREATE DATABASE bookmark_manager;```
   - ensure you are in the correct database by running ```\c bookmark_manager;```
-  - run the query saved in /db - ```01_create_bookmarks_table.sql```
+  - run the query saved in /db - ```01_create_bookmarks_table.sql```  
