@@ -2,13 +2,13 @@ All your currently-stored bookmarks:
 
 <ul>
   <% @bookmark.each do |bookmark| %>
-    <li><%= bookmark %></li>
+    <li><a href=<%= bookmark %>> <%= bookmark %> </a></li>
   <% end %>
 </ul>
 
 <p>Add a new bookmark:</p>
 <form action = "/add-bookmark" method = "post">
-  <p><input type = "text" name = "title" value = "title"></p>
-  <p><input type = "text" name = "url" value = "URL"></p>
+  <p>Title: <input type = "text" name = "title"></p>
+  <p>URL: <input type = "text" name = "url"></p>
   <input type = "submit" value = "Add bookmark">
 </form>

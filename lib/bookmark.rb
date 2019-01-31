@@ -14,4 +14,9 @@ class Bookmark
         row['url']
       end
   end
+
+  def self.create_new_bookmark(url, title)
+    @conn.exec( "INSERT INTO bookmarks(url, title)
+    VALUES('#{url}', '#{title}')" )
+  end
 end
