@@ -22,7 +22,7 @@ require 'capybara'
 require 'rspec'
 require 'simplecov'
 require 'simplecov-console'
-require_relative './setup_test_database'
+require 'setup_test_database'
 config.default_formatter = "doc"
 
 Capybara.app = BookmarkManager

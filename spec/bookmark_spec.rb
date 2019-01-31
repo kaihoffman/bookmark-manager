@@ -11,7 +11,7 @@ describe Bookmark do
       Bookmark.create_new_bookmark('http://www.wp.pl', 'WP')
       Bookmark.create_new_bookmark('http://www.destroyallsoftware.com', 'Destroy All Software')
 
-      expect(bookmark.all).to include "http://wp.pl"
+      expect(bookmark.all).to include "http://www.wp.pl"
       expect(bookmark.all).to include "http://www.destroyallsoftware.com"
     end
   end
