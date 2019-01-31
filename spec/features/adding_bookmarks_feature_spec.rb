@@ -5,7 +5,6 @@ feature "Adding bookmarks to the system" do
     fill_in :url, with: "https://edition.cnn.com"
     click_button 'Add bookmark'
     expect(page).to have_content("All your currently-stored bookmarks")
-    expect(page).to have_content "cnn"
-    expect(page).to have_selector(:css, 'href="https://edition.cnn.com')
+    expect(page).to have_content "https://edition.cnn.com"
   end
 end

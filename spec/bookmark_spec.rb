@@ -8,8 +8,8 @@ describe Bookmark do
     end
     it 'returns a list of all bookmarks stored' do
       connection = PG.connect(dbname: 'bookmark-manager-test')
-      connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.wp.pl');")
-      connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.destroyallsoftware.com');")
+      Bookmark.create_new_bookmark('http://www.wp.pl', 'WP')
+      Bookmark.create_new_bookmark('http://www.destroyallsoftware.com', 'Destroy All Software')
 
       expect(bookmark.all).to include "http://wp.pl"
       expect(bookmark.all).to include "http://www.destroyallsoftware.com"

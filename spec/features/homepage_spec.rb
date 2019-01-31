@@ -3,8 +3,8 @@ require "capybara/rspec"
 feature "Page loading mechanics" do
   before(:each) do
     connection = PG.connect(dbname: 'bookmark-manager-test')
-    connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.wp.pl');")
-    connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.destroyallsoftware.com');")
+    Bookmark.create_new_bookmark('http://www.wp.pl', 'WP')
+    Bookmark.create_new_bookmark('http://www.destroyallsoftware.com', 'Destroy All Software')
   end
   scenario 'Visiting the homepage presents the user with a relevant hello message' do
     visit('/')
