@@ -2,7 +2,7 @@ All your currently-stored bookmarks:
 
 <ul>
   <% @bookmark.each do |bookmark, title| %>
-    <li><a href=<%= bookmark %>> <%= bookmark %> </a></li>
+    <li><a href=<%= bookmark.url %>> <%= bookmark.title %> </a></li>
   <% end %>
 </ul>
 

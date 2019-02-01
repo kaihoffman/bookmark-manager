@@ -14,6 +14,6 @@ feature "Page loading mechanics" do
   scenario 'Visiting /bookmarks will present the user with a list of all bookmarks' do
     visit('/bookmarks')
     expect(page).to have_content("All your currently-stored bookmarks")
-    expect(page).to have_content("http://www.destroyallsoftware.com")
+    expect(page).to have_content("Destroy All Software")
   end
 end
