@@ -16,6 +16,7 @@ describe Bookmark do
       bookmarks = Bookmark.all
       expect(bookmarks.length).to eq 3
       expect(bookmarks.first).to be_a Bookmark
+      expect(bookmarks.first.id).to eq('1')
       expect(bookmarks.first.title).to eq 'Makers Academy'
       expect(bookmarks.first.url).to eq 'http://www.makersacademy.com'
     end
